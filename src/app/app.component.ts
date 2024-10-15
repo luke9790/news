@@ -10,7 +10,11 @@ export class AppComponent {
   @ViewChild('sidenav') sidenav!: MatSidenav;  // Riferimento al MatSidenav
 
   // Metodo per aprire o chiudere il sidenav
-  toggleSidenav() {
+  toggle() {
     this.sidenav.toggle();
+  }
+
+  logout(){
+
   }
 }

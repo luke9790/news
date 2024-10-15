@@ -14,7 +14,6 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NewsCategoryComponent } from './news-category/news-category.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
 import { HeaderComponent } from './header/header.component';
 
 // Definisci le rotte
@@ -32,7 +31,6 @@ const routes: Routes = [
     HomeComponent,
     ProfileComponent,
     NewsCategoryComponent,
-    SidenavComponent,
     HeaderComponent
   ],
   imports: [
