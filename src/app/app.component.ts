@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'newsaggregator';
+  @ViewChild('sidenav') sidenav!: MatSidenav;  // Riferimento al MatSidenav
+
+  // Metodo per aprire o chiudere il sidenav
+  toggleSidenav() {
+    this.sidenav.toggle();
+  }
 }

@@ -1,0 +1,27 @@
+::ng-deep .mat-toolbar {
+	padding: 0 !important;  // Rimuovi padding
+	margin: 0 !important;   // Rimuovi margin
+	background: none !important;  // Forza il background personalizzato
+  }
+  
+  ::ng-deep .mat-toolbar .mat-button, 
+  ::ng-deep .mat-toolbar .mat-icon-button {
+	padding: 0 !important;  // Rimuovi padding da eventuali bottoni
+  }
+  
+  ::ng-deep .mat-icon {
+	color: inherit !important;  // Assicura che il colore dell'icona erediti il colore del testo
+  }
+  
+  .active-link {
+	border: 2px solid red;  /* Bordi su tutti i lati */
+	padding: 0.25rem 0.5rem;  /* Padding per creare spazio attorno al testo */
+	border-radius: 4px;  /* Arrotonda leggermente gli angoli del box */
+  }
+
+  .menu-item {
+	padding: 0.25rem 0.5rem;  /* Stesso padding per tutte le sezioni */
+	border-radius: 4px;       /* Mantieni l'arrotondamento anche per le altre */
+  }
+  
+  
