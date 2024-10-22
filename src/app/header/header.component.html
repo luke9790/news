@@ -1,9 +1,7 @@
-<!-- Div per lo sfondo nero che copre tutta la larghezza -->
 <div class="bg-black w-full">
 	<mat-toolbar class="p-0 m-0 shadow-lg">
-	  <!-- Div interno per distanziare il contenuto dai bordi dello schermo -->
 	  <div class="w-full flex items-center justify-between px-4 py-2" style="margin-left: 250px; margin-right: 250px;">
-		<!-- Menu hamburger e logo a sinistra -->
+		
 		<div class="flex items-center space-x-2 text-white">
 		  <button mat-icon-button (click)="toggle()">
 			<mat-icon>menu</mat-icon>
@@ -11,7 +9,7 @@
 		  <img src="../../assets/ULTIME.png" alt="Logo" class="h-10">
 		</div>
   
-		<!-- Menu di navigazione al centro (visibile su schermi grandi) -->
+		
 		<div class="hidden lg:flex space-x-4">
 		  <a routerLink="/news" class="menu-item active-link hover:text-red-500 text-white font-medium uppercase tracking-wide">News</a>
 		  <a routerLink="/economia" class="menu-item hover:text-red-500 text-white font-medium uppercase tracking-wide">Economia</a>
@@ -23,16 +21,16 @@
 		  <a routerLink="/salute" class="menu-item hover:text-red-500 text-white font-medium uppercase tracking-wide">Salute</a>
 		</div>
   
-		<!-- Spazio per il widget del meteo (di default Firenze) -->
+		
 		<div class="hidden lg:flex items-center space-x-2 text-white">
 		  <div class="flex flex-col items-start">
 			<p class="font-medium">Firenze</p>
-			<p class="text-xs text-gray-400">Soleggiato, 18°C</p> <!-- Questo sarà dinamico -->
+			<p class="text-xs text-gray-400">Soleggiato, 18°C</p> 
 		  </div>
 		  <mat-icon class="text-2xl text-gray-400" >wb_sunny</mat-icon>
 		</div>
   
-		<!-- Pulsante di login migliorato -->
+		
 		<div class="hidden lg:flex items-center space-x-2">
 		  <button mat-button class="bg-red-600 text-white px-3 py-1 rounded-full hover:bg-red-700 shadow-md font-medium">
 			Accedi

@@ -4,12 +4,13 @@ import { MatSidenav } from '@angular/material/sidenav';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  @ViewChild('sidenav') sidenav!: MatSidenav;  // Riferimento al MatSidenav
+  @ViewChild('sidenav') sidenav!: MatSidenav;
+  title="Notizie 24";
 
-  // Metodo per aprire o chiudere il sidenav
+  
   toggle() {
     this.sidenav.toggle();
   }

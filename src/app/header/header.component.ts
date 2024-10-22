@@ -6,7 +6,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @Output() toggleSidenav = new EventEmitter<void>();  // Emissione dell'evento
+  @Output() toggleSidenav = new EventEmitter<void>();
 
   toggle() {
     this.toggleSidenav.emit();
