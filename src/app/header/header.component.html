@@ -1,25 +1,24 @@
 <div class="bg-black w-full">
 	<mat-toolbar class="p-0 m-0 shadow-lg">
-	  <div class="w-full flex items-center justify-between px-4 py-2" style="margin-left: 250px; margin-right: 250px;">
+	  <div class="w-full flex items-center justify-between px-4 py-2 ml-64 mr-64">
 		
 		<div class="flex items-center space-x-2 text-white">
 		  <button mat-icon-button (click)="toggle()">
 			<mat-icon>menu</mat-icon>
 		  </button>
-		  <img src="../../assets/ULTIME.png" alt="Logo" class="h-10">
+		  <img [src]="logoSrc" alt="Logo" class="h-10">
 		</div>
   
 		
 		<div class="hidden lg:flex space-x-4">
-		  <a routerLink="/news" class="menu-item active-link hover:text-red-500 text-white font-medium uppercase tracking-wide">News</a>
-		  <a routerLink="/economia" class="menu-item hover:text-red-500 text-white font-medium uppercase tracking-wide">Economia</a>
-		  <a routerLink="/politica" class="menu-item hover:text-red-500 text-white font-medium uppercase tracking-wide">Politica</a>
-		  <a routerLink="/sport" class="menu-item hover:text-red-500 text-white font-medium uppercase tracking-wide">Sport</a>
-		  <a routerLink="/intrattenimento" class="menu-item hover:text-red-500 text-white font-medium uppercase tracking-wide">Intrattenimento</a>
-		  <a routerLink="/scienza" class="menu-item hover:text-red-500 text-white font-medium uppercase tracking-wide">Scienza</a>
-		  <a routerLink="/cultura" class="menu-item hover:text-red-500 text-white font-medium uppercase tracking-wide">Cultura</a>
-		  <a routerLink="/salute" class="menu-item hover:text-red-500 text-white font-medium uppercase tracking-wide">Salute</a>
-		</div>
+			<a *ngFor="let item of menuItems"
+			   [routerLink]="item.route" 
+			   [ngClass]="{'active-link': isActive(item.route), 'menu-item': !isActive(item.route)}" 
+			   (click)="onSectionClick(item.route)"
+			   class="hover:text-red-500 text-white font-medium uppercase tracking-wide">
+			  {{ item.label }}
+			</a>
+		  </div>
   
 		
 		<div class="hidden lg:flex items-center space-x-2 text-white">
