@@ -1,6 +1,21 @@
 /* Prima configurazione di Angular Material */
 @use '@angular/material' as mat;
 
+/* Include il tema core di Angular Material */
+@include mat.core();
+
+/* Definisci la palette e il tema di Angular Material */
+$primary: mat.define-palette(mat.$indigo-palette);
+$accent: mat.define-palette(mat.$pink-palette, A200);
+$theme: mat.define-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+  )
+));
+
+/* Applica il tema */
+@include mat.all-component-themes($theme);
 
 /* Importa Tailwind CSS */
 @import 'tailwindcss/base';

@@ -3,16 +3,7 @@
 	margin: 0 !important;  
 	background: none !important; 
   }
-  
-  ::ng-deep .mat-toolbar .mat-button, 
-  ::ng-deep .mat-toolbar .mat-icon-button {
-	padding: 0 !important; 
-  }
-  
-  ::ng-deep .mat-icon {
-	color: inherit !important; 
-  }
-  
+    
   .active-link {
 	border: 2px solid red;  
 	padding: 0.25rem 0.5rem;  
@@ -24,28 +15,10 @@
 	border-radius: 4px;
   }
   
-  .overlay {
-	position: relative;
+  .sidenav-link {
+	color: white !important;
   }
   
-  .overlay::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, 0); 
-	transition: background-color 0.3s ease;
-	z-index: 1;
+  .mat-icon {
+	color: white !important;
   }
-  
-  .overlay-open::before {
-	background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  mat-sidenav-content {
-	position: relative;
-	z-index: 2;
-  }
-  
