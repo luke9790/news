@@ -1,5 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,15 +6,12 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  @ViewChild('sidenav') sidenav!: MatSidenav;
   title="Notizie 24";
+  isSidenavOpen = false;
 
-  
-  toggle() {
-    this.sidenav.toggle();
+  toggleSidenav() {
+    console.log("evento ricevuto in appcomponente")
+    this.isSidenavOpen = !this.isSidenavOpen; 
   }
 
-  logout(){
-
-  }
 }
