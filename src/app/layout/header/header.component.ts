@@ -13,11 +13,10 @@ export class HeaderComponent {
   menuItems = [
     { label: 'News', route: '/home' },
     { label: 'Economy', route: '/economy' },
-    { label: 'Politics', route: '/politics' },
+    { label: 'Technology', route: '/technology' },
     { label: 'Sports', route: '/sports' },
     { label: 'Entertainment', route: '/entertainment' },
     { label: 'Science', route: '/science' },
-    { label: 'Culture', route: '/culture' },
     { label: 'Health', route: '/health' },
   ];
 

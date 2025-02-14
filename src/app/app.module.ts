@@ -15,12 +15,11 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { EconomyComponent } from './components/economy/economy.component';
-import { PoliticsComponent } from './components/politics/politics.component';
 import { SportsComponent } from './components/sports/sports.component';
 import { EntertainmentComponent } from './components/entertainment/entertainment.component';
 import { ScienceComponent } from './components/science/science.component';
-import { CultureComponent } from './components/culture/culture.component';
 import { HealthComponent } from './components/health/health.component';
+import { TechnologyComponent } from './components/technology/technology.component';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -31,12 +30,11 @@ import { FooterComponent } from "./layout/footer/footer.component";
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'economy', component: EconomyComponent },
-  { path: 'politics', component: PoliticsComponent },
   { path: 'sports', component: SportsComponent },
   { path: 'entertainment', component: EntertainmentComponent },
   { path: 'science', component: ScienceComponent },
-  { path: 'culture', component: CultureComponent },
   { path: 'health', component: HealthComponent},
+  { path: 'technology', component: TechnologyComponent},
   { path: 'profile', component: ProfileComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },  
   { path: '**', redirectTo: '/home' }

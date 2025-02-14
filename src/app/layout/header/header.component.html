@@ -1,11 +1,11 @@
 <div class="bg-black w-full min-h-[7vh]">
-	<mat-toolbar class="p-0 m-0 shadow-lg custom-header">
-	  <div class="w-full flex items-center justify-between px-4 py-2 ml-64 mr-64">
+	<mat-toolbar class="p-0 m-0">
+	  <div class="w-full flex items-center justify-between px-[2vh] py-[2vh] mx-[4vh]">
 		<div class="flex items-center space-x-2 text-white">
 		  <button mat-icon-button (click)="toggleSidenav()">
 			<mat-icon>menu</mat-icon>
 		  </button>
-		  <img [src]="logoSrc" alt="Logo" class="h-10">
+		  <img [src]="logoSrc" alt="Logo" class="h-[4vh] aspect-square min-h-8">
 		</div>
   
 		<div class="hidden lg:flex space-x-4">
@@ -35,8 +35,6 @@
 	</mat-toolbar>
   </div>
   
-
-  
   <mat-sidenav-container class="h-screen">
 	<mat-sidenav #sidenav [opened]="sidenavOpen" (closedStart)="sidenavOpen = false"  mode="over" style="width: 250px; background-color: #ee3434; color: white; display: flex; flex-direction: column; height: 100%;">
 	  <div class="px-4 py-2 flex-grow">
@@ -50,9 +48,9 @@
 			<mat-icon class="mr-2 text-white">money</mat-icon>
 			<span class="text-white">Economy</span>
 		  </a>
-		  <a mat-list-item routerLink="/politics" class="text-white sidenav-link">
+		  <a mat-list-item routerLink="/technology" class="text-white sidenav-link">
 			<mat-icon class="mr-2 text-white">gavel</mat-icon>
-			<span class="text-white">Politics</span>
+			<span class="text-white">Technology</span>
 		  </a>
 		  <a mat-list-item routerLink="/sports" class="text-white sidenav-link">
 			<mat-icon class="mr-2 text-white">sports</mat-icon>
@@ -65,10 +63,6 @@
 		  <a mat-list-item routerLink="/science" class="text-white sidenav-link">
 			<mat-icon class="mr-2 text-white">science</mat-icon>
 			<span class="text-white">Science</span>
-		  </a>
-		  <a mat-list-item routerLink="/culture" class="text-white sidenav-link">
-			<mat-icon class="mr-2 text-white">book</mat-icon>
-			<span class="text-white">Culture</span>
 		  </a>
 		  <a mat-list-item routerLink="/health" class="text-white sidenav-link">
 			<mat-icon class="mr-2 text-white">health_and_safety</mat-icon>

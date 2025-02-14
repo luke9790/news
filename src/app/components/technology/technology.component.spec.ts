@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CultureComponent } from './culture.component';
+import { TechnologyComponent } from './technology.component';
 
-describe('CultureComponent', () => {
-  let component: CultureComponent;
-  let fixture: ComponentFixture<CultureComponent>;
+describe('TechnologyComponent', () => {
+  let component: TechnologyComponent;
+  let fixture: ComponentFixture<TechnologyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CultureComponent]
+      imports: [TechnologyComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CultureComponent);
+    fixture = TestBed.createComponent(TechnologyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

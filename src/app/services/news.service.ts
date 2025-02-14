@@ -24,6 +24,8 @@ export class NewsService {
     );
   }
 
+  // business entertainment general health  science sports  technology.
+
   getNewsByCategory(category: string): Observable<any> {
     const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${environment.newsApiKey}`;
     return this.http.get(url).pipe(
