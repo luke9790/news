@@ -1,13 +1,14 @@
-/* Prima configurazione di Angular Material */
 @use '@angular/material' as mat;
 
 /* Include il tema core di Angular Material */
 @include mat.core();
 
-/* Definisci la palette e il tema di Angular Material */
-$primary: mat.define-palette(mat.$indigo-palette);
+/* Definisci le palette con il nuovo metodo */
+$primary: mat.define-palette(mat.$blue-palette);
 $accent: mat.define-palette(mat.$pink-palette, A200);
-$theme: mat.define-light-theme((
+
+/* Crea un tema con il nuovo approccio */
+$theme: mat.define-theme((
   color: (
     primary: $primary,
     accent: $accent,
@@ -25,8 +26,12 @@ $theme: mat.define-light-theme((
 /* Global styles */
 html, body {
   height: 100%;
+  margin: 0;
+  overflow: hidden;
 }
 body {
-  margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -23,6 +23,8 @@ import { CultureComponent } from './components/culture/culture.component';
 import { HealthComponent } from './components/health/health.component';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout/layout.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from "./layout/footer/footer.component";
 
 
 
@@ -46,6 +48,8 @@ const routes: Routes = [
     HomeComponent,
     ProfileComponent,
     LayoutComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -54,10 +58,11 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     HttpClientModule,
     MatToolbarModule,
-    MatSidenavModule,  
+    MatSidenavModule,
     MatIconModule,
-    MatListModule
-  ],
+    MatListModule,
+
+],
   providers: [],
   bootstrap: [AppComponent]
 })

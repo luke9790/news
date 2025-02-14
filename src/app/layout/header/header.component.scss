@@ -1,0 +1,24 @@
+::ng-deep .mat-toolbar {
+	padding: 0 !important;
+	margin: 0 !important;  
+	background: none !important; 
+  }
+    
+  .active-link {
+	border: 2px solid red;  
+	padding: 0.25rem 0.5rem;  
+	border-radius: 4px;  
+  }
+
+  .menu-item {
+	padding: 0.25rem 0.5rem;  
+	border-radius: 4px;
+  }
+  
+  .sidenav-link {
+	color: white !important;
+  }
+  
+  .mat-icon {
+	color: white !important;
+  }
