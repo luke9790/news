@@ -1,0 +1,16 @@
+<div class="flex items-center space-x-4 weather-text">
+
+	<div class="flex flex-col items-start">
+	  <p class="font-bold ">{{ cityName }}</p>
+	  <p class="text-gray-400">📅 {{ currentDate }}</p>
+	</div>
+  
+
+	<div class="flex flex-col items-start">
+	  <p class=" text-gray-400">🌡️ Min: {{ temperatureMin }} / Max: {{ temperatureMax }}</p>
+	  <p class=" text-gray-400">💨 Wind: {{ windIntensity }}</p>
+	  <p class=" text-gray-300">🌤️ Conditions: {{ weatherDescription }}</p>
+	</div>
+  
+	<mat-icon class="text-4xl text-gray-300">{{ weatherIcon }}</mat-icon>
+  </div>
