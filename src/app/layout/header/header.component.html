@@ -13,7 +13,7 @@
 
 		<div class="w-[50vw] items-center max-[1500px]:hidden">
 			<a *ngFor="let item of menuItems"
-			[routerLink]="item.route"
+			[routerLink]="['/home', item.route]"
 			[ngClass]="{'active-link': isActive(item.route), 'menu-item': !isActive(item.route)}"
 			class="text-WN font-medium uppercase tracking-wide">
 		   {{ item.label }}
@@ -40,31 +40,31 @@
 	  <div class="px-[1vw]">
 		<h3 class="text-lg font-bold text-white">News</h3>
 		<mat-nav-list>
-		  <a mat-list-item routerLink="/home" class="text-white sidenav-link"> 
+		  <a mat-list-item routerLink="/home/news" class="text-white sidenav-link"> 
 			<mat-icon>home</mat-icon>
 			<span class="text-white">Home</span>
 		  </a>
-		  <a mat-list-item routerLink="/economy" class="text-white sidenav-link">
+		  <a mat-list-item routerLink="/home/economy" class="text-white sidenav-link">
 			<mat-icon>money</mat-icon>
 			<span class="text-white">Economy</span>
 		  </a>
-		  <a mat-list-item routerLink="/technology" class="text-white sidenav-link">
+		  <a mat-list-item routerLink="/home/technology" class="text-white sidenav-link">
 			<mat-icon>gavel</mat-icon>
 			<span class="text-white">Technology</span>
 		  </a>
-		  <a mat-list-item routerLink="/sports" class="text-white sidenav-link">
+		  <a mat-list-item routerLink="/home/sports" class="text-white sidenav-link">
 			<mat-icon>sports</mat-icon>
 			<span class="text-white">Sports</span>
 		  </a>
-		  <a mat-list-item routerLink="/entertainment" class="text-white sidenav-link">
+		  <a mat-list-item routerLink="/home/entertainment" class="text-white sidenav-link">
 			<mat-icon>theater_comedy</mat-icon>
 			<span class="text-white">Entertainment</span>
 		  </a>
-		  <a mat-list-item routerLink="/science" class="text-white sidenav-link">
+		  <a mat-list-item routerLink="/home/science" class="text-white sidenav-link">
 			<mat-icon>science</mat-icon>
 			<span class="text-white">Science</span>
 		  </a>
-		  <a mat-list-item routerLink="/health" class="text-white sidenav-link">
+		  <a mat-list-item routerLink="/home/health" class="text-white sidenav-link">
 			<mat-icon>health_and_safety</mat-icon>
 			<span class="text-white">Health</span>
 		  </a>

@@ -28,17 +28,13 @@ import { WeatherWidgetComponent } from './components/weather-widget/weather-widg
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'economy', component: EconomyComponent },
-  { path: 'sports', component: SportsComponent },
-  { path: 'entertainment', component: EntertainmentComponent },
-  { path: 'science', component: ScienceComponent },
-  { path: 'health', component: HealthComponent},
-  { path: 'technology', component: TechnologyComponent},
+  { path: 'home/:section', component: HomeComponent },
+  { path: 'home', redirectTo: 'home/news', pathMatch: 'full' },
   { path: 'profile', component: ProfileComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },  
-  { path: '**', redirectTo: '/home' }
+  { path: '', redirectTo: '/home/news', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home/news' }
 ];
+
 
 @NgModule({
   declarations: [

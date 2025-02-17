@@ -23,12 +23,11 @@ export class NewsService {
     );
   }
 
-  // business entertainment general health  science sports  technology.
+  // CATEGORIE: business entertainment general health science sports technology
 
   getNewsByCategory(category: string): Observable<any> {
     const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${environment.newsApiKey}`;
     return this.http.get(url).pipe(
-      tap(response => console.log(`News API response for category ${category}:`, response)),
       map(response => response),
       catchError(error => {
         console.error(`Error fetching news for category ${category}:`, error);

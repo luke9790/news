@@ -11,14 +11,15 @@ export class HeaderComponent {
   sidenavOpen = false;
   logoSrc = "../../assets/ULTIME.png";
   menuItems = [
-    { label: 'News', route: '/home' },
-    { label: 'Economy', route: '/economy' },
-    { label: 'Technology', route: '/technology' },
-    { label: 'Sports', route: '/sports' },
-    { label: 'Entertainment', route: '/entertainment' },
-    { label: 'Science', route: '/science' },
-    { label: 'Health', route: '/health' },
+    { label: 'News', route: 'news' },
+    { label: 'Economy', route: 'economy' },
+    { label: 'Technology', route: 'technology' },
+    { label: 'Sports', route: 'sports' },
+    { label: 'Entertainment', route: 'entertainment' },
+    { label: 'Science', route: 'science' },
+    { label: 'Health', route: 'health' },
   ];
+  
 
   constructor(private router: Router) {}
 
@@ -27,13 +28,17 @@ export class HeaderComponent {
     console.log(this.sidenavOpen);
   }
 
-  isActive(link: string): boolean {
-    return this.router.url === link;
+  isActive(section: string): boolean {
+    const segments = this.router.url.split('/');
+    return segments[1] === 'home' && segments[2] === section;
   }
+  
 
-  onSectionClick(route: string) {
-    this.router.navigate([route]);
+  onSectionClick(section: string) {
+    this.router.navigate(['/home', section]);
   }
+  
+  
 
   logout() {
     // Logica per il logout
