@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
-  sidenavOpen = false;
   logoSrc = "../../assets/ULTIME.png";
   menuItems = [
     { label: 'News', route: '/home' },
@@ -22,10 +21,6 @@ export class LayoutComponent {
   ];
 
   constructor(private router: Router) {}
-
-  toggleSidenav() {
-    this.sidenavOpen = !this.sidenavOpen;
-  }
 
   isActive(link: string): boolean {
     return this.router.url === link;

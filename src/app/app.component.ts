@@ -7,11 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title="Notizie 24";
-  isSidenavOpen = false;
-
-  toggleSidenav() {
-    console.log("evento ricevuto in appcomponente")
-    this.isSidenavOpen = !this.isSidenavOpen; 
-  }
-
 }

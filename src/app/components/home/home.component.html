@@ -1,58 +1,63 @@
-<div class="px-4 py-8 ml-64 mr-64">
-	<section class="main-news">
-	  <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
-		
-		<!-- Colonna sinistra con due notizie importanti -->
-		<div class="col-span-1" *ngIf="topNews.length > 2">
-		  <article class="bg-white shadow-md rounded-lg overflow-hidden mb-6">
-			<img [src]="topNews[1]?.urlToImage" alt="{{topNews[1]?.title}}" class="w-full object-cover" style="height: 200px; width: 100%;">
-			<div class="p-4">
-			  <h2 class="text-xl font-semibold mb-2">{{topNews[1]?.title}}</h2>
-			  <p class="text-gray-700">{{topNews[1]?.description}}</p>
-			</div>
-		  </article>
-		  <article class="bg-white shadow-md rounded-lg overflow-hidden">
-			<img [src]="topNews[2]?.urlToImage" alt="{{topNews[2]?.title}}" class="w-full object-cover" style="height: 200px; width: 100%;">
-			<div class="p-4">
-			  <h2 class="text-xl font-semibold mb-2">{{topNews[2]?.title}}</h2>
-			  <p class="text-gray-700">{{topNews[2]?.description}}</p>
-			</div>
-		  </article>
-		</div>
-		
-		<!-- Colonna centrale con la notizia del giorno -->
-		<div class="col-span-2" *ngIf="topNews.length > 0">
-		  <article class="bg-white shadow-md rounded-lg overflow-hidden h-full">
-			<img [src]="topNews[0]?.urlToImage" alt="{{topNews[0]?.title}}" class="w-full object-cover" style="height: 400px; width: 100%;">
-			<div class="p-6">
-			  <h2 class="text-2xl font-bold mb-4">{{topNews[0]?.title}}</h2>
-			  <p class="text-gray-700 mb-4">{{topNews[0]?.description}}</p>
-			  <ul class="list-disc list-inside text-blue-600">
-				<li *ngFor="let related of topNews[0]?.relatedNews"><a href="#">{{related}}</a></li>
-			  </ul>
-			</div>
-		  </article>
-		</div>
-  
-		<!-- Colonna destra con notizie senza immagini e TG Video -->
-		<div class="col-span-1">
-		  <!-- Player video di YouTube -->
-		  <div class="bg-white shadow-md rounded-lg overflow-hidden p-4 mb-6" *ngIf="videoUrl">
-			<h2 class="text-xl font-semibold mb-2">News Video</h2>
-			<div class="video-container">
-			  <iframe [src]="videoUrl" frameborder="0" allowfullscreen></iframe>
-			</div>
+<div class="main-container">
+	<div class="px-4 py-8 mx-auto max-w-[1200px]">
+	  <section class="main-news h-full mb-[7vh]">
+		<div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+		  
+		  <!-- Colonna sinistra -->
+		  <div class="col-span-1" *ngIf="topNews.length > 2">
+			<article class="bg-white shadow-md rounded-lg overflow-hidden mb-6">
+			  <img [src]="topNews[1]?.urlToImage" alt="{{topNews[1]?.title}}" class="w-full object-cover" style="height: 200px;">
+			  <div class="p-4">
+				<h2 class="text-xl font-semibold mb-2">{{topNews[1]?.title}}</h2>
+				<p class="text-gray-700">{{topNews[1]?.description}}</p>
+			  </div>
+			</article>
+			<article class="bg-white shadow-md rounded-lg overflow-hidden">
+			  <img [src]="topNews[2]?.urlToImage" alt="{{topNews[2]?.title}}" class="w-full object-cover" style="height: 200px;">
+			  <div class="p-4">
+				<h2 class="text-xl font-semibold mb-2">{{topNews[2]?.title}}</h2>
+				<p class="text-gray-700">{{topNews[2]?.description}}</p>
+			  </div>
+			</article>
 		  </div>
   
-		  <article class="bg-white shadow-md rounded-lg overflow-hidden mb-6" *ngFor="let headline of topNews.slice(3, 6)">
-			<div class="p-4">
-			  <h2 class="text-xl font-semibold mb-2">{{headline.title}}</h2>
-			  <p class="text-gray-700">{{headline.description}}</p>
-			</div>
-		  </article>
-		</div>
+		  <!-- Colonna centrale -->
+		  <div class="col-span-2" *ngIf="topNews.length > 0">
+			<article class="bg-white shadow-md rounded-lg overflow-hidden h-full">
+			  <img [src]="topNews[0]?.urlToImage" alt="{{topNews[0]?.title}}" class="w-full object-cover" style="height: 400px;">
+			  <div class="p-6">
+				<h2 class="text-2xl font-bold mb-4">{{topNews[0]?.title}}</h2>
+				<p class="text-gray-700 mb-4">{{topNews[0]?.description}}</p>
+				<ul class="list-disc list-inside text-blue-600">
+				  <li *ngFor="let related of topNews[0]?.relatedNews">
+					<a href="#">{{related}}</a>
+				  </li>
+				</ul>
+			  </div>
+			</article>
+		  </div>
   
-	  </div>
-	</section>
+		  <!-- Colonna destra -->
+		  <div class="col-span-1">
+			<!-- Video -->
+			<div class="bg-white shadow-md rounded-lg overflow-hidden p-4 mb-6" *ngIf="videoUrl">
+			  <h2 class="text-xl font-semibold mb-2">News Video</h2>
+			  <div class="aspect-w-16 aspect-h-9">
+				<iframe [src]="videoUrl" frameborder="0" allowfullscreen class="w-full h-48"></iframe>
+			  </div>
+			</div>
+  
+			<!-- Notizie extra -->
+			<article class="bg-white shadow-md rounded-lg overflow-hidden mb-6" *ngFor="let headline of topNews.slice(3, 6)">
+			  <div class="p-4">
+				<h2 class="text-xl font-semibold mb-2">{{headline.title}}</h2>
+				<p class="text-gray-700">{{headline.description}}</p>
+			  </div>
+			</article>
+		  </div>
+  
+		</div>
+	  </section>
+	</div>
   </div>
   

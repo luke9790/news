@@ -1,26 +1,28 @@
-<div class="bg-black w-full min-h-[7vh] fixed top-0 z-50">
+<div class="bg-black w-full min-h-[7vh]">
 	<mat-toolbar class="p-0 m-0">
-	  <div class="w-full flex items-center py-[1vh] px-[2vw] text-white">
+	  <div class="w-full flex items-center justify-between py-[1vh] px-[1vw] text-white ">
 		
-		<div class="w-[20vw] flex">
+		<div class="w-[25vw] flex px-[1vw] min-w-[150px]">
 		  <button mat-icon-button (click)="toggleSidenav()">
 			<mat-icon>menu</mat-icon>
 		  </button>
-		  <img [src]="logoSrc" alt="Logo" class="h-[4vh] aspect-square min-h-8">
+		  <div class="px-[4vh]">
+			  <img [src]="logoSrc" alt="Logo" class=" h-[4vh] aspect-square min-h-8">
+		  </div>
 		</div>
 
-		<div class="w-[60vw] items-center">
+		<div class="w-[50vw] items-center max-[1500px]:hidden">
 			<a *ngFor="let item of menuItems"
 			[routerLink]="item.route"
 			[ngClass]="{'active-link': isActive(item.route), 'menu-item': !isActive(item.route)}"
-			class="header-text font-medium uppercase tracking-wide">
+			class="text-WN font-medium uppercase tracking-wide">
 		   {{ item.label }}
 		 </a>
 		</div>
   
-		<div class="w-[20vw] flex space-x-2  justify-end">
+		<div class="w-[25vw] flex space-x-1  justify-end">
 			<app-weather-widget></app-weather-widget>
-		  <button mat-button class="bg-red-600  px-3 py-2 rounded-full hover:bg-red-700 shadow-md font-medium">
+		  <button mat-button class="bg-red-600 text-WN  px-[1vw] py-[0.5vh] rounded-full hover:bg-red-700 shadow-md font-medium">
 			Login
 		  </button>
 		</div>
@@ -30,9 +32,12 @@
   </div>
   
   
-  <mat-sidenav-container class="h-screen">
-	<mat-sidenav #sidenav [opened]="sidenavOpen" (closedStart)="sidenavOpen = false"  mode="over" style="width: 250px; background-color: #ee3434; color: white; display: flex; flex-direction: column; height: 100%;">
-	  <div class="px-4 py-[7vh] flex-grow">
+  <mat-sidenav-container>
+	<mat-sidenav #sidenav 
+	[opened]="sidenavOpen" 
+	(closedStart)="sidenavOpen = false"  
+	mode="over" style="width: 15%; background-color: #ee3434; color: white; display: flex; flex-direction: column; height: auto; overflow:hidden">
+	  <div class="px-4">
 		<h3 class="text-lg font-bold text-white">News</h3>
 		<mat-nav-list>
 		  <a mat-list-item routerLink="/home" class="text-white sidenav-link"> 

@@ -24,6 +24,7 @@ export class HeaderComponent {
 
   toggleSidenav() {
     this.sidenavOpen = !this.sidenavOpen;
+    console.log(this.sidenavOpen);
   }
 
   isActive(link: string): boolean {
