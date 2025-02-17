@@ -31,63 +31,65 @@
 	</mat-toolbar>
   </div>
   
-  
   <mat-sidenav-container class="fixed sidenav-offset">
 	<mat-sidenav #sidenav 
-	[opened]="sidenavOpen" 
-	(closedStart)="sidenavOpen = false"  
-	mode="over" style="width: 15%; background-color: #ee3434; color: white; display: flex; flex-direction: column; height: auto; overflow:hidden">
-	  <div class="px-[1vw]">
-		<h3 class="text-lg font-bold text-white">News</h3>
-		<mat-nav-list>
-		  <a mat-list-item routerLink="/home/news" class="text-white sidenav-link"> 
+	  [opened]="sidenavOpen" 
+	  (closedStart)="sidenavOpen = false"  
+	  mode="over" 
+	  class="sidenav-container">
+	
+	  <div class="sidenav-content">
+		<h3 class="sidenav-heading">News</h3>
+		<mat-nav-list class="custom-nav-list">
+		  <a mat-list-item routerLink="/home/news" class="sidenav-link" style="padding: 5%;">
 			<mat-icon>home</mat-icon>
-			<span class="text-white">Home</span>
+			<span class="sidenav-link-text">Home</span>
 		  </a>
-		  <a mat-list-item routerLink="/home/economy" class="text-white sidenav-link">
+		  <a mat-list-item routerLink="/home/economy" class="sidenav-link" style="padding: 5%;">
 			<mat-icon>money</mat-icon>
-			<span class="text-white">Economy</span>
+			<span class="sidenav-link-text">Economy</span>
 		  </a>
-		  <a mat-list-item routerLink="/home/technology" class="text-white sidenav-link">
+		  <a mat-list-item routerLink="/home/technology" class="sidenav-link" style="padding: 5%;">
 			<mat-icon>gavel</mat-icon>
-			<span class="text-white">Technology</span>
+			<span class="sidenav-link-text">Technology</span>
 		  </a>
-		  <a mat-list-item routerLink="/home/sports" class="text-white sidenav-link">
+		  <a mat-list-item routerLink="/home/sports" class="sidenav-link" style="padding: 5%;">
 			<mat-icon>sports</mat-icon>
-			<span class="text-white">Sports</span>
+			<span class="sidenav-link-text">Sports</span>
 		  </a>
-		  <a mat-list-item routerLink="/home/entertainment" class="text-white sidenav-link">
+		  <a mat-list-item routerLink="/home/entertainment" class="sidenav-link" style="padding: 5%;">
 			<mat-icon>theater_comedy</mat-icon>
-			<span class="text-white">Entertainment</span>
+			<span class="sidenav-link-text">Entertainment</span>
 		  </a>
-		  <a mat-list-item routerLink="/home/science" class="text-white sidenav-link">
+		  <a mat-list-item routerLink="/home/science" class="sidenav-link" style="padding: 5%;">
 			<mat-icon>science</mat-icon>
-			<span class="text-white">Science</span>
+			<span class="sidenav-link-text">Science</span>
 		  </a>
-		  <a mat-list-item routerLink="/home/health" class="text-white sidenav-link">
+		  <a mat-list-item routerLink="/home/health" class="sidenav-link" style="padding: 5%;">
 			<mat-icon>health_and_safety</mat-icon>
-			<span class="text-white">Health</span>
+			<span class="sidenav-link-text">Health</span>
 		  </a>
 		</mat-nav-list>
 	  </div>
-  
-	  <div class="px-4 py-2 border-t border-white mt-auto">
-		<h3 class="text-lg font-bold">User</h3>
-		<mat-nav-list>
-		  <a mat-list-item routerLink="/profile" class=" sidenav-link">
+	
+	  <div class="sidenav-user">
+		<h3 class="sidenav-heading">User</h3>
+		<mat-nav-list class="custom-nav-list">
+		  <a mat-list-item routerLink="/profile" class="sidenav-link" style="padding: 5%;">
 			<mat-icon>person</mat-icon>
-			<span>Profile</span>
+			<span class="sidenav-link-text">Profile</span>
 		  </a>
-		  <a mat-list-item (click)="logout()" class=" sidenav-link">
+		  <a mat-list-item (click)="logout()" class="sidenav-link" style="padding: 5%;">
 			<mat-icon>logout</mat-icon>
-			<span>Logout</span>
+			<span class="sidenav-link-text">Logout</span>
 		  </a>
 		</mat-nav-list>
 	  </div>
 	</mat-sidenav>
-  
+	
 	<mat-sidenav-content [ngClass]="{'overlay-open': sidenavOpen, 'overlay': true}">
 	  <router-outlet></router-outlet>
 	</mat-sidenav-content>
   </mat-sidenav-container>
+  
   

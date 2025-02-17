@@ -33,3 +33,67 @@
 	height: calc(100vh - clamp(7vh, 2.5rem + 2vw, 12vh));
   }
   
+/* Stili generali per la sidenav */
+.sidenav-container {
+	width: 15%;
+	background-color: #ee3434;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	overflow: hidden;
+  }
+  
+  .sidenav-content {
+	padding: 0.5vw;
+  }
+  
+  .sidenav-heading {
+	font-size: clamp(1rem, 2vw, 1.5rem);
+	font-weight: bold;
+	margin: 0 0 1vh 0;
+  }
+  
+  .sidenav-link {
+	color: inherit;
+	display: flex;
+	align-items: center;
+  }
+  
+  .sidenav-link-text {
+	font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+	margin-left: 0vw;
+  }
+  
+  /* Ridimensionamento delle icone all'interno dei link */
+  .sidenav-link mat-icon {
+	font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  }
+  
+  .sidenav-user {
+	padding: 0;
+	border-top: 1px solid white;
+	margin-top: auto;
+  }
+  
+  /* Media Query per schermi piccoli */
+@media (max-width: 800px) {
+	.sidenav-heading {
+
+	  font-size: clamp(0.5rem, 2vw, 1.2rem);
+	}
+	.sidenav-link-text {
+	  font-size: clamp(0.25rem, 2vw, 1.2rem);
+	  margin-left: 0;
+	  padding: 0;
+	}
+	.sidenav-link mat-icon {
+	  display: none; /* nasconde le icone */
+	}
+	.sidenav-content,
+	.sidenav-user {
+	  padding: 0; /* rimuove padding */
+	}
+  }
+  
+  
