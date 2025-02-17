@@ -1,91 +1,148 @@
-
-<div class="px-[15vw] py-[7vh]">
-<!-- Sezione principale con 3 colonne -->
-<div class="flex gap-6">
-
-	<!-- Colonna sinistra: 3 notizie medie (una sotto l'altra) -->
-	<div class="flex flex-col basis-[25%] gap-6">
-	<ng-container *ngFor="let news of topNews.slice(0, 3)">
-		<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="flex-1 block">
-		<article class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-full">
-			<img 
-			[src]="news.urlToImage" 
-			alt="{{ news.title }}" 
-			class="w-full object-cover h-40"
-			/>
-			<div class="p-4">
-			<h2 class="news-title-medium mb-2">{{ news.title }}</h2>
-			<p class="news-text-medium text-gray-700">{{ news.description }}</p>
-			</div>
-		</article>
-		</a>
-	</ng-container>
+<div>
+	<!-- Desktop Layout: visibile per larghezze ≥ 720px -->
+	<div class="hidden min-[720px]:block px-[16vw] py-[7vh]">
+	  <div class="flex gap-6">
+	  
+		<!-- Colonna sinistra -->
+		<div class="flex flex-col basis-[25%] gap-6">
+		  <ng-container *ngFor="let news of topNews.slice(0, 3)">
+			<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="flex-1 block">
+			  <article class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-full">
+				<img 
+				  [src]="news.urlToImage" 
+				  alt="{{ news.title }}" 
+				  class="w-full object-cover h-40"
+				/>
+				<div class="p-4">
+				  <h2 class="news-title-medium mb-2">{{ news.title }}</h2>
+				  <p class="news-text-medium text-gray-700">{{ news.description }}</p>
+				</div>
+			  </article>
+			</a>
+		  </ng-container>
+		</div>
+		
+		<!-- Colonna centrale-->
+		<div class="flex flex-col basis-[55%] gap-6">
+		  <ng-container *ngFor="let news of topNews.slice(3, 5)">
+			<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="flex-1 block">
+			  <article class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-full">
+				<img 
+				  [src]="news.urlToImage" 
+				  alt="{{ news.title }}" 
+				  class="w-full object-cover h-96"
+				/>
+				<div class="p-6">
+				  <h2 class="news-title-large mb-4">{{ news.title }}</h2>
+				  <p class="news-text-large text-gray-700">{{ news.description }}</p>
+				</div>
+			  </article>
+			</a>
+		  </ng-container>
+		</div>
+		
+		<!-- Colonna destra -->
+		<div class="flex flex-col basis-[20%] gap-6">
+		  <ng-container *ngFor="let news of topNews.slice(5, 9)">
+			<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="block">
+			  <article class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col">
+				<img 
+				  [src]="news.urlToImage" 
+				  alt="{{ news.title }}" 
+				  class="w-full object-cover h-24"
+				/>
+				<div class="p-4">
+				  <h2 class="news-title-small mb-2">{{ news.title }}</h2>
+				  <p class="news-text-small text-gray-700">{{ news.description }}</p>
+				</div>
+			  </article>
+			</a>
+		  </ng-container>
+		</div>
+	  
+	  </div>
+	  
+	  <!-- Sezione "Other news" -->
+	  <div class="mt-8">
+		<h2 class="news-title-small font-bold mb-4">Other news</h2>
+		<div class="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+		  <ng-container *ngFor="let news of topNews.slice(9)">
+			<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="block h-full">
+			  <article class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-full">
+				<img 
+				  [src]="news.urlToImage" 
+				  alt="{{ news.title }}" 
+				  class="w-full object-cover h-20"
+				/>
+				<div class="p-2 flex flex-col flex-grow">
+				  <h2 class="news-title-small mb-2">{{ news.title }}</h2>
+				</div>
+			  </article>
+			</a>
+		  </ng-container>
+		</div>
+	  </div>
 	</div>
 	
-	<!-- Colonna centrale: 2 notizie grandi (una sopra l'altra) -->
-	<div class="flex flex-col basis-[55%] gap-6">
-	<ng-container *ngFor="let news of topNews.slice(3, 5)">
-		<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="flex-1 block">
-		<article class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-full">
-			<img 
-			[src]="news.urlToImage" 
-			alt="{{ news.title }}" 
-			class="w-full object-cover h-96"
-			/>
-			<div class="p-6">
-			<h2 class="news-title-large mb-4">{{ news.title }}</h2>
-			<p class="news-text-large text-gray-700">{{ news.description }}</p>
-			</div>
-		</article>
-		</a>
-	</ng-container>
-	</div>
-	
-	<!-- Colonna destra: 5 notizie piccole (senza scrollbar) -->
-	<div class="flex flex-col basis-[20%] gap-6">
-	<ng-container *ngFor="let news of topNews.slice(5, 9)">
-		<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="block">
-		<article class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col">
-			<img 
-			[src]="news.urlToImage" 
-			alt="{{ news.title }}" 
-			class="w-full object-cover h-24"
-			/>
-			<div class="p-4">
-			<h2 class="news-title-small mb-2">{{ news.title }}</h2>
-			<p class="news-text-small text-gray-700">{{ news.description }}</p>
-			</div>
-		</article>
-		</a>
-	</ng-container>
-	</div>
+	<!-- Mobile Layout: visibile per larghezze < 720px -->
+	<div class="block max-[719px]:block min-[720px]:hidden px-[16vw] py-[7vh]">
+	  <div class="grid grid-cols-[60%_40%] gap-6">
 
-</div>
+		<div>
+		  <ng-container *ngFor="let news of topNews.slice(0, 4)">
+			<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="block mb-6">
+			  <article class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col">
+				<img 
+				  [src]="news.urlToImage" 
+				  alt="{{ news.title }}" 
+				  class="w-full object-cover h-40"
+				/>
+				<div class="p-4">
+				  <h2 class="news-title-medium mb-2">{{ news.title }}</h2>
+				  <p class="news-text-medium text-gray-700">{{ news.description }}</p>
+				</div>
+			  </article>
+			</a>
+		  </ng-container>
+		</div>
 
-<div class="mt-8">
-	<h2 class="news-title-small font-bold mb-4">Other news</h2>
-	<!-- La classe auto-rows-fr fa sì che ogni riga abbia altezza uguale -->
-	<div class="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-	  <ng-container *ngFor="let news of topNews.slice(9)">
-		<!-- Forziamo il link ad avere h-full per farlo estendere all'intera cella -->
-		<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="block h-full">
-		  <article class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-full">
-			<img 
-			  [src]="news.urlToImage" 
-			  alt="{{ news.title }}" 
-			  class="w-full object-cover h-20"
-			/>
-			<!-- Il contenitore del testo usa flex-grow per espandersi -->
-			<div class="p-2 flex flex-col flex-grow">
-			  <h2 class="news-title-small mb-2">{{ news.title }}</h2>
-			  <!-- Se volessi aggiungere un eventuale paragrafo, puoi usare: -->
-			  <!-- <p class="news-text-small text-gray-700 flex-grow">Testo di esempio</p> -->
-			</div>
-		  </article>
-		</a>
-	  </ng-container>
+		<div>
+		  <ng-container *ngFor="let news of topNews.slice(4, 11)">
+			<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="block mb-6">
+			  <article class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col">
+				<img 
+				  [src]="news.urlToImage" 
+				  alt="{{ news.title }}" 
+				  class="w-full object-cover h-20"
+				/>
+				<div class="p-2">
+				  <h2 class="news-title-small mb-2">{{ news.title }}</h2>
+				</div>
+			  </article>
+			</a>
+		  </ng-container>
+		</div>
+	  </div>
+
+	  <div class="mt-8">
+		<h2 class="news-title-small font-bold mb-4">Other news</h2>
+		<div class="grid grid-cols-2 gap-6">
+		  <ng-container *ngFor="let news of topNews.slice(11)">
+			<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="block h-full">
+			  <article class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col h-full">
+				<img 
+				  [src]="news.urlToImage" 
+				  alt="{{ news.title }}" 
+				  class="w-full object-cover h-20"
+				/>
+				<div class="p-2 flex flex-col flex-grow">
+				  <h2 class="news-title-small mb-2">{{ news.title }}</h2>
+				</div>
+			  </article>
+			</a>
+		  </ng-container>
+		</div>
+	  </div>
 	</div>
   </div>
   
-  
-</div>
