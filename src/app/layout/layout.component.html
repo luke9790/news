@@ -1,9 +1,10 @@
-<div class="layout-container">
-	<app-header class="sticky top-0 z-50"></app-header>
-  
-	<main class="content">
+<div class="flex flex-col min-h-screen">
+	<!-- Header -->
+	<app-header class="flex-shrink-0"></app-header>
+	
+	<!-- Contenuto Principale che cresce per occupare lo spazio disponibile -->
+	<main class="flex-grow flex flex-col">
+	  <router-outlet></router-outlet>
 	</main>
-  
-	<app-footer class="footer"></app-footer>
+	
   </div>
-  

@@ -23,10 +23,9 @@ export class HomeComponent implements OnInit{
 
 
   ngOnInit(): void {
-    // notizie
     this.newsSubscription = this.newsService.getTopNews().subscribe({
       next: (data:any) => {
-        //console.log('Dati ricevuti:', data);
+        console.log('Dati ricevuti:', data);
         this.topNews = data.articles.filter((article: { title: string; }) => article.title && article.title !== '[Removed]');
       },
       error: (error) => {
@@ -37,10 +36,9 @@ export class HomeComponent implements OnInit{
       }
     });
 
-    // video
     this.videoSubscription = this.videoService.getLatestVideo().subscribe({
       next: (data:any) => {
-        //console.log('Video ricevuto:', data);
+        console.log('Video ricevuto:', data);
         const videoId = data.items[0].id.videoId;
         this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${videoId}`);
       },

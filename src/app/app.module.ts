@@ -23,7 +23,6 @@ import { TechnologyComponent } from './components/technology/technology.componen
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from "./layout/footer/footer.component";
 import { WeatherWidgetComponent } from './components/weather-widget/weather-widget.component';
 
 
@@ -48,7 +47,6 @@ const routes: Routes = [
     ProfileComponent,
     LayoutComponent,
     HeaderComponent,
-    FooterComponent,
     WeatherWidgetComponent
   ],
   imports: [

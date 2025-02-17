@@ -22,3 +22,14 @@
   .mat-icon {
 	color: white !important;
   }
+
+
+  .header-dynamic {
+	height: clamp(7vh, 2.5rem + 2vw, 12vh);
+  }
+  
+  .sidenav-offset {
+	top: clamp(7vh, 2.5rem + 2vw, 12vh);
+	height: calc(100vh - clamp(7vh, 2.5rem + 2vw, 12vh));
+  }
+  

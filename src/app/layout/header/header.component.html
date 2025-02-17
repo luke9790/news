@@ -1,4 +1,4 @@
-<div class="bg-black w-full min-h-[7vh]">
+<div class="bg-black w-full header-dynamic fixed z-50">
 	<mat-toolbar class="p-0 m-0">
 	  <div class="w-full flex items-center justify-between py-[1vh] px-[1vw] text-white ">
 		
@@ -32,55 +32,55 @@
   </div>
   
   
-  <mat-sidenav-container>
+  <mat-sidenav-container class="fixed sidenav-offset">
 	<mat-sidenav #sidenav 
 	[opened]="sidenavOpen" 
 	(closedStart)="sidenavOpen = false"  
 	mode="over" style="width: 15%; background-color: #ee3434; color: white; display: flex; flex-direction: column; height: auto; overflow:hidden">
-	  <div class="px-4">
+	  <div class="px-[1vw]">
 		<h3 class="text-lg font-bold text-white">News</h3>
 		<mat-nav-list>
 		  <a mat-list-item routerLink="/home" class="text-white sidenav-link"> 
-			<mat-icon class="mr-2 text-white">home</mat-icon>
+			<mat-icon>home</mat-icon>
 			<span class="text-white">Home</span>
 		  </a>
 		  <a mat-list-item routerLink="/economy" class="text-white sidenav-link">
-			<mat-icon class="mr-2 text-white">money</mat-icon>
+			<mat-icon>money</mat-icon>
 			<span class="text-white">Economy</span>
 		  </a>
 		  <a mat-list-item routerLink="/technology" class="text-white sidenav-link">
-			<mat-icon class="mr-2 text-white">gavel</mat-icon>
+			<mat-icon>gavel</mat-icon>
 			<span class="text-white">Technology</span>
 		  </a>
 		  <a mat-list-item routerLink="/sports" class="text-white sidenav-link">
-			<mat-icon class="mr-2 text-white">sports</mat-icon>
+			<mat-icon>sports</mat-icon>
 			<span class="text-white">Sports</span>
 		  </a>
 		  <a mat-list-item routerLink="/entertainment" class="text-white sidenav-link">
-			<mat-icon class="mr-2 text-white">theater_comedy</mat-icon>
+			<mat-icon>theater_comedy</mat-icon>
 			<span class="text-white">Entertainment</span>
 		  </a>
 		  <a mat-list-item routerLink="/science" class="text-white sidenav-link">
-			<mat-icon class="mr-2 text-white">science</mat-icon>
+			<mat-icon>science</mat-icon>
 			<span class="text-white">Science</span>
 		  </a>
 		  <a mat-list-item routerLink="/health" class="text-white sidenav-link">
-			<mat-icon class="mr-2 text-white">health_and_safety</mat-icon>
+			<mat-icon>health_and_safety</mat-icon>
 			<span class="text-white">Health</span>
 		  </a>
 		</mat-nav-list>
 	  </div>
   
 	  <div class="px-4 py-2 border-t border-white mt-auto">
-		<h3 class="text-lg font-bold text-white">User</h3>
+		<h3 class="text-lg font-bold">User</h3>
 		<mat-nav-list>
-		  <a mat-list-item routerLink="/profile" class="text-white sidenav-link">
-			<mat-icon class="mr-2 text-white">person</mat-icon>
-			<span class="text-white">Profile</span>
+		  <a mat-list-item routerLink="/profile" class=" sidenav-link">
+			<mat-icon>person</mat-icon>
+			<span>Profile</span>
 		  </a>
-		  <a mat-list-item (click)="logout()" class="text-white sidenav-link">
-			<mat-icon class="mr-2 text-white">logout</mat-icon>
-			<span class="text-white">Logout</span>
+		  <a mat-list-item (click)="logout()" class=" sidenav-link">
+			<mat-icon>logout</mat-icon>
+			<span>Logout</span>
 		  </a>
 		</mat-nav-list>
 	  </div>

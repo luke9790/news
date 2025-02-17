@@ -29,13 +29,11 @@ export class WeatherWidgetComponent implements OnInit {
           this.getWeather(latitude, longitude);
         },
         () => {
-          console.log('Geolocation denied, using Rome');
           this.cityName = 'Rome';
           this.getWeather(41.9028, 12.4964);
         }
       );
     } else {
-      console.log('Geolocation not supported, using Rome');
       this.cityName = 'Rome';
       this.getWeather(41.9028, 12.4964);
     }
@@ -63,10 +61,8 @@ export class WeatherWidgetComponent implements OnInit {
       const geoApiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en&key=${this.apiKey}`;
       const response = await fetch(geoApiUrl);
       const data = await response.json();
-      console.log('Nearest city response:', data);
       return data.city || data.locality || data.principalSubdivision || 'Your location';
     } catch (error) {
-      console.error('Error fetching nearest city:', error);
       return 'Your location';
     }
   }

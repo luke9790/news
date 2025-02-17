@@ -15,7 +15,6 @@ export class NewsService {
 
   getTopNews(): Observable<any> {
     return this.http.get(this.apiUrlNews).pipe(
-      // tap(response => console.log('News API response:', response)),
       map(response => response),
       catchError(error => {
         console.error('Error fetching news:', error);
