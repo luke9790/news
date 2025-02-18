@@ -1,27 +1,66 @@
-# News aggregator site (News 24)
+# Angular News Aggregator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+This is a **portfolio** project built with Angular—a news aggregator website that fetches the latest headlines from [NewsAPI](https://newsapi.org/) and displays short articles on today's news. The design is inspired by major news sites like CNN and BBC, utilizing [Tailwind CSS] for a modern, responsive look. The application features a header and a slide-out sidenav for seamless navigation across different sections.
 
-## Development server
+> **Note:** The free tier of NewsAPI only works on localhost, so the application is intended to run locally.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **News Aggregation:** Retrieves current news from NewsAPI.
+- **Intuitive Navigation:** Includes a header and a slide-out sidenav for easy browsing.
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **Modern Aesthetics:** Design inspired by leading news outlets like CNN and BBC.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
+- **Angular:** The main framework for building the application.
+- **Tailwind CSS:** For creating a modern and responsive UI.
+- **NewsAPI:** To fetch up-to-date news content.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Prerequisites
 
-## Running unit tests
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [Angular CLI](https://cli.angular.io/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation and Local Setup
 
-## Running end-to-end tests
+1. **Clone the repository:**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    ```bash
+    git clone https://github.com/your-username/your-repo-name.git
+    cd your-repo-name
+    ```
 
-## Further help
+2. **Install the dependencies:**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    ```bash
+    npm install
+    ```
+
+3. **Configure Environment Variables:**
+
+    Create (or modify) the file `src/environments/environment.ts` with your NewsAPI key:
+
+    ```typescript
+    export const environment = {
+      production: false,
+      newsApiKey: 'YOUR_API_KEY'
+    };
+    ```
+
+    > **Important:** Register at [NewsAPI.org](https://newsapi.org/) to obtain your API key. Note that the free API only works on localhost.
+
+4. **Run the application:**
+
+    ```bash
+    ng serve --open
+    ```
+
+    This command will launch your default browser and open the application at `http://localhost:4200`.
+
+## Conclusion
+
+This portfolio project showcases modern web development skills using Angular and Tailwind CSS. If you have any questions, suggestions, or collaboration ideas, feel free to get in touch!
+
+---
+
