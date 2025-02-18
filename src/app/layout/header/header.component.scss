@@ -33,7 +33,6 @@
 	height: calc(100vh - clamp(7vh, 2.5rem + 2vw, 12vh));
   }
   
-/* Stili generali per la sidenav */
 .sidenav-container {
 	width: 15%;
 	background-color: #ee3434;
@@ -65,7 +64,6 @@
 	margin-left: 0vw;
   }
   
-  /* Ridimensionamento delle icone all'interno dei link */
   .sidenav-link mat-icon {
 	font-size: clamp(0.9rem, 1.2vw, 1.1rem);
   }
@@ -76,7 +74,6 @@
 	margin-top: auto;
   }
   
-  /* Media Query per schermi piccoli */
 @media (max-width: 800px) {
 	.sidenav-heading {
 
@@ -88,11 +85,11 @@
 	  padding: 0;
 	}
 	.sidenav-link mat-icon {
-	  display: none; /* nasconde le icone */
+	  display: none;
 	}
 	.sidenav-content,
 	.sidenav-user {
-	  padding: 0; /* rimuove padding */
+	  padding: 0;
 	}
   }
   

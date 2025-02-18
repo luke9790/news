@@ -1,9 +1,8 @@
 <div>
-	<!-- Desktop Layout: visibile per larghezze ≥ 720px -->
+	<!-- Desktop Layout larghezze ≥ 720px -->
 	<div class="hidden min-[720px]:block px-[16vw] py-[7vh]">
 	  <div class="flex gap-6">
 	  
-		<!-- Colonna sinistra -->
 		<div class="flex flex-col basis-[25%] gap-6">
 		  <ng-container *ngFor="let news of topNews.slice(0, 3)">
 			<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="flex-1 block">
@@ -22,7 +21,6 @@
 		  </ng-container>
 		</div>
 		
-		<!-- Colonna centrale-->
 		<div class="flex flex-col basis-[55%] gap-6">
 		  <ng-container *ngFor="let news of topNews.slice(3, 5)">
 			<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="flex-1 block">
@@ -41,7 +39,6 @@
 		  </ng-container>
 		</div>
 		
-		<!-- Colonna destra -->
 		<div class="flex flex-col basis-[20%] gap-6">
 		  <ng-container *ngFor="let news of topNews.slice(5, 9)">
 			<a [href]="news.url" target="_blank" rel="noopener noreferrer" class="block">
@@ -62,7 +59,6 @@
 	  
 	  </div>
 	  
-	  <!-- Sezione "Other news" -->
 	  <div class="mt-8">
 		<h2 class="news-title-small font-bold mb-4">Other news</h2>
 		<div class="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -84,7 +80,7 @@
 	  </div>
 	</div>
 	
-	<!-- Mobile Layout: visibile per larghezze < 720px -->
+	<!-- Mobile Layout: larghezze < 720px -->
 	<div class="block max-[719px]:block min-[720px]:hidden px-[16vw] py-[7vh]">
 	  <div class="grid grid-cols-[60%_40%] gap-6">
 
