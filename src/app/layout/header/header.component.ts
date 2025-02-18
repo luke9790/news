@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   sidenavOpen = false;
-  logoSrc = "../../assets/ULTIME.png";
+  logoSrc = "../../assets/NEWS.png";
   menuItems = [
     { label: 'News', route: 'news' },
     { label: 'Economy', route: 'economy' },

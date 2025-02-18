@@ -7,7 +7,7 @@
 			<mat-icon>menu</mat-icon>
 		  </button>
 		  <div class="px-[4vh]">
-			  <img [src]="logoSrc" alt="Logo" class=" h-[4vh] aspect-square min-h-8">
+			  <img [src]="logoSrc" alt="Logo" class=" h-[7vh] aspect-square min-h-6">
 		  </div>
 		</div>
 
@@ -22,9 +22,9 @@
   
 		<div class="w-[25vw] flex space-x-1  justify-end">
 			<app-weather-widget class="px-[1vw]"></app-weather-widget>
-		  <button mat-button class="bg-red-600 text-WN  px-[0.5vw] py-[0.5vh] rounded-full hover:bg-red-700 shadow-md font-medium">
+		  <!-- <button mat-button class="bg-red-600 text-WN  px-[0.5vw] py-[0.5vh] rounded-full hover:bg-red-700 shadow-md font-medium">
 			Login
-		  </button>
+		  </button> -->
 		</div>
   
 	  </div>
@@ -72,7 +72,7 @@
 		</mat-nav-list>
 	  </div>
 	
-	  <div class="sidenav-user">
+	  <!-- <div class="sidenav-user">
 		<h3 class="sidenav-heading">User</h3>
 		<mat-nav-list class="custom-nav-list">
 		  <a mat-list-item routerLink="/profile" class="sidenav-link" style="padding:5% 5%;">
@@ -84,7 +84,7 @@
 			<span class="sidenav-link-text">Logout</span>
 		  </a>
 		</mat-nav-list>
-	  </div>
+	  </div> -->
 	</mat-sidenav>
 	
 	<mat-sidenav-content [ngClass]="{'overlay-open': sidenavOpen, 'overlay': true}">

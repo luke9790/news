@@ -14,12 +14,6 @@ import { MatListModule } from '@angular/material/list';
 // Miei
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { EconomyComponent } from './components/economy/economy.component';
-import { SportsComponent } from './components/sports/sports.component';
-import { EntertainmentComponent } from './components/entertainment/entertainment.component';
-import { ScienceComponent } from './components/science/science.component';
-import { HealthComponent } from './components/health/health.component';
-import { TechnologyComponent } from './components/technology/technology.component';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/header/header.component';
