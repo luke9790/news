@@ -1,6 +1,6 @@
 # Angular News Aggregator
 
-![Screenshot del sito](assets/site.png)
+![Screenshot del sito](src/assets/site.png)
 
 This is a **portfolio** project built with Angular—a news aggregator website that fetches the latest headlines from [NewsAPI](https://newsapi.org/) and displays short articles on today's news. The design is inspired by major news sites like CNN and BBC, utilizing [Tailwind CSS] for a modern, responsive look. The application features a header and a slide-out sidenav for seamless navigation across different sections.
 
